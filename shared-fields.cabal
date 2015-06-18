@@ -13,6 +13,15 @@ category:            Control
 build-type:          Simple
 cabal-version:       >=1.10
 
+source-repository head
+  type: git
+  location: git://github.com/intolerable/shared-fields.git
+
+source-repository this
+  type: git
+  location: git://github.com/intolerable/shared-fields.git
+  tag: v0.1.0.0
+
 library
   exposed-modules:
     Control.Lens.TH.SharedFields
