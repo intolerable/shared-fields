@@ -42,4 +42,4 @@ test-suite test
     lens,
     shared-fields,
     text
-  GHC-options: -Wall -Werror
+  GHC-options: -Wall
