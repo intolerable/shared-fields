@@ -35,7 +35,7 @@ make name =
     methodType =
       ForallT
         [PlainTV f]
-        [ClassP ''Functor [VarT f]]
+        [AppT (ConT ''Functor) vf]
         ((va `arrow` AppT vf va) `arrow` (vs `arrow` AppT vf vs))
 
 arrow :: Type -> Type -> Type
