@@ -11,7 +11,6 @@ import Language.Haskell.TH
 generateField :: String -> Q [Dec]
 generateField = return . return . make
 
-
 -- | Generate classes for multiple fields. Use this if you want to
 --     define a bunch of fields.
 generateFields :: [String] -> Q [Dec]
