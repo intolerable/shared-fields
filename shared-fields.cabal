@@ -1,5 +1,5 @@
 name:                shared-fields
-version:             0.1.0.0
+version:             0.1.1.0
 synopsis:
   a tiny library for using shared lens fields
 description:
@@ -22,7 +22,7 @@ source-repository head
 source-repository this
   type: git
   location: git://github.com/intolerable/shared-fields.git
-  tag: v0.1.0.0
+  tag: v0.1.1.0
 
 library
   exposed-modules:
