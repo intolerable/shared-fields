@@ -34,7 +34,11 @@ make name =
     methodType =
       ForallT
         [PlainTV f]
+#if MIN_VERSION_template_haskell(2,10,0)
+        [AppT (ConT ''Functor) vf]
+#else
         [ClassP ''Functor [vf]]
+#endif
         ((va `arrow` AppT vf va) `arrow` (vs `arrow` AppT vf vs))
 
 arrow :: Type -> Type -> Type
