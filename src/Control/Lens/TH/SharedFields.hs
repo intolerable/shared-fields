@@ -21,7 +21,7 @@ make name =
   ClassD
     []
     (mkName $ "Has" ++ name)
-    [PlainTV s, PlainTV a]
+    [PlainTV s (), PlainTV a ()]
     [FunDep [s] [a]]
     [SigD (mkName $ functionName name) methodType]
   where
@@ -33,7 +33,7 @@ make name =
     vf = VarT f
     methodType =
       ForallT
-        [PlainTV f]
+        [PlainTV f SpecifiedSpec]
         [AppT (ConT ''Functor) vf]
         ((va `arrow` AppT vf va) `arrow` (vs `arrow` AppT vf vs))
 
